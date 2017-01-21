@@ -10,7 +10,7 @@ function SignUpController(MenuService,UserInfoService) {
   $sgn.info = {};
   
    $sgn.submit = function() {
-      MenuService.getMenuItem($sgn.info.favorite)
+      MenuService.getItem($sgn.info.favorite)
         .then(function(response) {
           $sgn.FavIsNOK = false;
           $sgn.submitted = true;
