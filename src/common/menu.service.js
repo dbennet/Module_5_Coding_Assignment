@@ -27,7 +27,7 @@ function MenuService($http, ApiPath) {
     });
   };
 
-  service.getItem = function (categoryShortName) {
+  service.getItem = function (shortName) {
     var response = $http({
         method: "GET",
         //url: ("https://davids-restaurant.herokuapp.com/menu_items.json?category="+categoryShortName)
