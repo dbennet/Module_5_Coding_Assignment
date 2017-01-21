@@ -12,7 +12,7 @@ function SignUpController(MenuService,UserInfoService) {
    $sgn.submit = function() {
       MenuService.getMenuItem($sgn.info.favorite)
         .then(function(response) {
-          $sgn.invalidFavorite = false;
+          $sgn.FavIsNOK = false;
           $sgn.submitted = true;
           UserInfoService.setInfo($sgn.info);
         })
@@ -24,7 +24,7 @@ function SignUpController(MenuService,UserInfoService) {
   $sgn.validateFav = function() {
     MenuService.getItem($sgn.info.favorite).then(function(response) {
         $sgn.FavIsNOK = false;
-    }).catch(function () {;
+    }).catch(function () {
         $sgn.FavIsNOK = true;
         })
    }
