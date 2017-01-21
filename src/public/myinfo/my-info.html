@@ -22,8 +22,13 @@
     <td>Phone:</td>
     <td>{{myInfoCtrl.info.email}}</td> 
   </tr>
-  <tr>
-    <td>Favourite Meal:</td>
-    <td>{{myInfoCtrl.info.favorite}}</td> 
-  </tr>
 </table>
+
+<div>
+    <h2 class="text-center">Here Is Your Favorite Meal</h2>
+  <menu-item
+             menu-item="myInfoCtrl.menuItem">
+  </menu-item>
+</div>
+
+

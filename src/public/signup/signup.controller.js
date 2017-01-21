@@ -7,25 +7,25 @@ angular.module('public')
 SignUpController.$inject = ['MenuService','UserInfoService'];
 function SignUpController(MenuService,UserInfoService) {
   var $sgn = this;
-  $ctrl.info = {};
+  $sgn.info = {};
   
-   $ctrl.submit = function() {
-      MenuService.getMenuItem($ctrl.info.favorite)
+   $sgn.submit = function() {
+      MenuService.getMenuItem($sgn.info.favorite)
         .then(function(response) {
-          $ctrl.invalidFavorite = false;
-          $ctrl.submitted = true;
-          UserInfoService.setInfo($ctrl.info);
+          $sgn.invalidFavorite = false;
+          $sgn.submitted = true;
+          UserInfoService.setInfo($sgn.info);
         })
         .catch(function() {
-          $ctrl.invalidFavorite = true;
+          $sgn.invalidFavorite = true;
         });
     }
   
   $sgn.validateFav = function() {
     MenuService.getItem($sgn.info.favorite).then(function(response) {
-        $ctrl.FavIsNOK = false;
+        $sgn.FavIsNOK = false;
     }).catch(function () {;
-        $ctrl.FavIsNOK = true;
+        $sgn.FavIsNOK = true;
         })
    }
 }
