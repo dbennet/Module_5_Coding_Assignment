@@ -25,7 +25,7 @@ function SignUpController(MenuService) {
     var resp = MenuService.getItem($sgn.info.favorite);
     console.log(resp);
    }
-
+}
 
 })();
 
