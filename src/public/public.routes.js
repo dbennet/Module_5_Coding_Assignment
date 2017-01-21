@@ -52,7 +52,6 @@ function routeConfig ($stateProvider) {
       templateUrl: 'src/public/my-info.html',
       controller: 'MyInfoController',
       controllerAs: 'myInfoCtrl',
-      }
     });
        
 }
