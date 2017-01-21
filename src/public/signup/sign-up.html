@@ -37,7 +37,7 @@
     <label for="favorite">Favorite dish</label>
     <input type="text" class="form-control" name="favorite" placeholder="Favorite dish" ng-model="signUpCtrl.info.favorite"
       ng-blur="signUpCtrl.validateFav()">
-    <span ng-if="signUpCtrl.invalidFavorite">
+    <span ng-if="signUpCtrl.FavIsNOK">
             No such menu number exists
           </span>
   </div>

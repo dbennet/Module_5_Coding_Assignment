@@ -22,8 +22,11 @@ function SignUpController(MenuService) {
     }
   
   $sgn.validateFav = function() {
-    var resp = MenuService.getItem($sgn.info.favorite);
-    console.log(resp);
+    MenuService.getItem($sgn.info.favorite).then(function(response) {
+        $ctrl.FavIsNOK = false;
+    }).catch(function () {;
+        $ctrl.FavIsNOK = true;
+        })
    }
 }
 
