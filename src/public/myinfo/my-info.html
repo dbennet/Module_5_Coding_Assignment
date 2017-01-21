@@ -1,6 +1,9 @@
 <div class="container">
   <h2 class="text-center">Here Is Your User Information</h2>
   
+  <div ng-if="!myInfoCtrl.info">Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></div>
+  <div ng-if="myInfoCtrl.info">
+
   <table>
   <tr>
     <th>Info</th>
@@ -8,6 +11,7 @@
   </tr>
   <tr>
     <td>First Name:</td>
+
     <td>{{myInfoCtrl.info.firstName}}</td> 
   </tr>
   <tr>
@@ -29,6 +33,8 @@
   <menu-item class="text-center"
              menu-item="myInfoCtrl.menuItem">
   </menu-item>
+</div>
+
 </div>
 
 
