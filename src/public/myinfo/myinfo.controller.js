@@ -10,7 +10,7 @@ function MyInfoController(UserInfoService, MenuService) {
   $info.info = UserInfoService.getInfo();  
   
     MenuService.getItem($info.info.favorite).then(function(response) {
-         $info.menuItem = response;
+         $info.menuItem = response.data;
     }).catch(function () {
         $info.menuItem = "";
     })
