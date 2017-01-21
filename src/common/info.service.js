@@ -16,3 +16,4 @@ function UserInfoService() {
      return service.info;
     }
 }
+})();

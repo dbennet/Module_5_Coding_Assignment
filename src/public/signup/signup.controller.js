@@ -5,7 +5,7 @@ angular.module('public')
 .controller('SignUpController', SignUpController);
 
 SignUpController.$inject = ['MenuService','UserInfoService'];
-function SignUpController(MenuService) {
+function SignUpController(MenuService,UserInfoService) {
   var $sgn = this;
   $ctrl.info = {};
   
